@@ -1,0 +1,83 @@
+/* html starting size */
+html {
+    font-size: 16px;
+}
+
+
+
+/* Basic Element Sizes */
+h1 {
+    font-size: 2rem;
+}
+h2 {
+    font-size: 1.125rem;
+}
+h3, h4, h5 {
+    font-size: 1rem;
+}
+
+
+/* Header */
+
+.header-container {   
+    height: 100vh;
+    margin: 0% 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.headerLeft {
+    height: 100%;
+    width: 27%;
+    background-color: black;
+}
+.headerRight {
+    height: 100%;
+    width: 73%;
+    background-color: rgb(117, 117, 117);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.headerPic {
+    width: 100%;
+    height: 100%;
+    /* background-color: bisque; */
+    background-image: url(../images/profile-pic2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.headerLeft h1 {
+    color: wheat;
+    text-align: center;
+    margin: 1rem;
+}
+.headerRight nav {
+    margin: 1rem;
+}
+
+/* Navigation */
+.nav-container {
+    width: 100%;
+    /* height: 10%; */
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.nav-container a {
+    color: aquamarine;
+    text-decoration: none;
+    box-shadow: 2px;
+    font-size: larger;
+    font-weight: bold;
+    flex-grow: 1;
+    text-align: center;
+}
