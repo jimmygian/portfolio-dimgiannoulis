@@ -3,12 +3,11 @@ html {
     font-size: 16px;
 }
 
+/* Basic Element Sizes */
 body {
     max-width: 100rem;
     margin: auto;
 }
-
-/* Basic Element Sizes */
 h1 {
     font-size: 2rem;
 }
@@ -20,7 +19,7 @@ h3, h4, h5 {
 }
 
 
-/* Header */
+/* Header Hero */
 
 .header-container {   
     height: 100vh;
@@ -30,7 +29,6 @@ h3, h4, h5 {
     justify-content: center;
     align-items: flex-start;
 }
-
 .headerLeft {
     height: 100%;
     width: min(300px, 50%);
@@ -38,7 +36,7 @@ h3, h4, h5 {
 }
 .headerRight {
     height: 100%;
-    width: min(90rem,100%);
+    width: min(90rem, 100%);
     background-color: rgb(117, 117, 117);
     display: flex;
     flex-direction: column;
@@ -57,7 +55,7 @@ h3, h4, h5 {
 }
 
 .headerLeft h1 {
-    color: wheat;
+    color: rgb(255, 255, 255);
     text-align: center;
     margin: 1rem;
 }
@@ -75,7 +73,7 @@ h3, h4, h5 {
     flex-wrap: wrap;
 }
 .nav-container a {
-    color: aquamarine;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     box-shadow: 2px;
     font-size: larger;
@@ -84,8 +82,30 @@ h3, h4, h5 {
     text-align: center;
 }
 
+/* Hero Name */
 
-@media (max-width: 50em) {
+.heroNameBox {
+    max-width: fit-content;
+    position: relative;
+    top: 70%;
+    left: 10%;
+    color: white;
+    /* background-color: rgba(129, 151, 101, 0.41); */
+    /* border-bottom: 4px solid green; */
+    /* padding: 10px 30px; */
+}
+.heroNameBox h2 {
+    font-size: min(3rem, max(2rem, 4vw));
+    font-weight: bold;
+} 
+.heroNameBox h3 {
+    font-size: min(3rem, max(2rem, 4vw));
+    font-weight: bold;
+    color: black;
+    background: yellow;
+} 
+
+@media (max-width: 50rem) {
     .headerPic {
         background-position: bottom;
         background-color: black;
