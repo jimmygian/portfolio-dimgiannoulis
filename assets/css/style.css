@@ -4,6 +4,7 @@
     --dark-bg: rgb(26, 26, 26);
     --dark-txt: rgb(20, 20, 20);
     --light-txt: white;
+    --light-txt-secondary: rgb(158, 158, 158);
     --light-section-bg: rgb(231, 231, 231);
     --txt-bg-style: rgb(88, 247, 125);
 }
@@ -13,6 +14,7 @@
 html {
     font-size: 16px;
 }
+
 
 /* Basic Element Sizes */
 body {
@@ -31,7 +33,6 @@ h3, h4, h5 {
 
 
 /* Header Hero */
-
 .header-container {   
     height: 75vh;
     margin: 0% 0%;
@@ -72,6 +73,7 @@ h3, h4, h5 {
     margin: 1rem;
 }
 
+
 /* Navigation */
 .nav-container {
     width: 100%;
@@ -97,6 +99,7 @@ h3, h4, h5 {
 .nav-container a:hover {
     border-bottom: 2px solid var(--txt-bg-style);
 }
+
 
 /* Hero Name Box */
 .heroNameBox {
@@ -147,13 +150,50 @@ h3, h4, h5 {
 
 
 /* Contact */
+.contact-section {
+    min-height: 14rem;
+    background-color: var(--dark-bg);
+    padding: 1rem;
+    padding-top: 2.6rem;
+}
+.contact-section h2 {
+    color: var(--light-txt);
+    margin: 0 auto;
+    padding: 0;
+    padding-bottom: 1.5rem;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-item {
+    min-width: 20rem;
+    margin: 0.5rem;
+    flex-grow: 1;
+}
+.contact-item img {
+    height: 1rem;
+}
+.contact-item a {
+    height: 1rem;
+    text-decoration: none;
+    margin: 1rem;
+    color: var(--light-txt-secondary);
+}
+.contact-item a:hover {
+    font-weight: bold;
+}
 
 
 
 
-
+/* Media Queries */
 
 @media (min-width: 50rem) {
+    /* Header */
     .headerLeft {
         display: flex;
         height: 100%;
@@ -162,6 +202,19 @@ h3, h4, h5 {
     }
     .headerRight {
         background-color: var(--header-color);
+    }
+
+    /* Contact */
+    .contact-container {
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+        justify-content: center;
+    }
+    .contact-item {
+        min-width: 8rem;
+        margin-top: 3rem;
+        align-items: start;
+        /* flex-grow: 1; */
     }
 }
 
