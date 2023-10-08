@@ -1,3 +1,14 @@
+/* CSS Custom Properties */
+:root {
+    --header-color: rgb(120, 120, 125);
+    --dark-bg: rgb(26, 26, 26);
+    --dark-txt: rgb(20, 20, 20);
+    --light-txt: white;
+    --light-section-bg: rgb(231, 231, 231);
+    --txt-bg-style: rgb(88, 247, 125);
+}
+
+
 /* html starting size */
 html {
     font-size: 16px;
@@ -35,7 +46,7 @@ h3, h4, h5 {
 .headerRight {
     height: 100%;
     width: min(90rem, 100%);
-    background-color: black;
+    background-color: var(--dark-bg);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -53,7 +64,7 @@ h3, h4, h5 {
 }
 
 .headerLeft h1 {
-    color: rgb(255, 255, 255);
+    color: var(--light-txt);
     text-align: center;
     margin: 1rem;
 }
@@ -73,7 +84,7 @@ h3, h4, h5 {
     flex-wrap: wrap;
 }
 .nav-container a {
-    color: rgb(255, 255, 255);
+    color: var(--light-txt);
     text-decoration: none;
     box-shadow: 2px;
     font-size: min(1.2rem, max(0.9rem, 4vw));
@@ -84,7 +95,7 @@ h3, h4, h5 {
 }
 
 .nav-container a:hover {
-    border-bottom: 2px solid yellow;
+    border-bottom: 2px solid var(--txt-bg-style);
 }
 
 /* Hero Name Box */
@@ -93,7 +104,7 @@ h3, h4, h5 {
     position: relative;
     top: 70%;
     left: 10%;
-    color: white;
+    color: var(--light-txt);
 }
 .heroNameBox h2 {
     font-size: min(3rem, max(2rem, 4vw));
@@ -102,8 +113,8 @@ h3, h4, h5 {
 .heroNameBox h3 {
     font-size: min(3rem, max(2rem, 4vw));
     font-weight: bold;
-    color: black;
-    background: yellow;
+    color: var(--dark-txt);
+    background: var(--txt-bg-style);
 } 
 
 
@@ -112,7 +123,7 @@ h3, h4, h5 {
     max-width: 100%;
     max-height: 100%;
     margin: 0 auto;
-    background-color: rgb(231, 231, 231);
+    background-color: var(--light-section-bg);
     text-align: center;
 }
 .page-section h2 {
@@ -125,8 +136,8 @@ h3, h4, h5 {
     margin-top: 2.5rem;
 }
 .page-section h2 span {
-    background: linear-gradient(transparent 60%, yellow 40%);
-    border-bottom: 0.2rem solid yellow;
+    background: linear-gradient(transparent 60%, var(--txt-bg-style) 40%);
+    border-bottom: 0.2rem solid var(--txt-bg-style);
 }
 .page-section p {
     text-align: center;
@@ -135,6 +146,7 @@ h3, h4, h5 {
 }
 
 
+/* Contact */
 
 
 
@@ -146,9 +158,15 @@ h3, h4, h5 {
         display: flex;
         height: 100%;
         width: min(300px, 50%);
-        background-color: black;
+        background-color: var(--dark-bg);
     }
     .headerRight {
-        background-color: rgb(120, 120, 125);
+        background-color: var(--header-color);
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .header-container {   
+        height: 100vh;
     }
 }
