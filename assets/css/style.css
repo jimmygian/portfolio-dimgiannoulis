@@ -3,7 +3,10 @@ html {
     font-size: 16px;
 }
 
-
+body {
+    max-width: 100rem;
+    margin: auto;
+}
 
 /* Basic Element Sizes */
 h1 {
@@ -30,12 +33,12 @@ h3, h4, h5 {
 
 .headerLeft {
     height: 100%;
-    width: 27%;
+    width: min(300px, 50%);
     background-color: black;
 }
 .headerRight {
     height: 100%;
-    width: 73%;
+    width: min(90rem,100%);
     background-color: rgb(117, 117, 117);
     display: flex;
     flex-direction: column;
@@ -50,6 +53,7 @@ h3, h4, h5 {
     background-image: url(../images/profile-pic2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .headerLeft h1 {
@@ -64,8 +68,6 @@ h3, h4, h5 {
 /* Navigation */
 .nav-container {
     width: 100%;
-    /* height: 10%; */
-    /* background-color: blue; */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -78,6 +80,17 @@ h3, h4, h5 {
     box-shadow: 2px;
     font-size: larger;
     font-weight: bold;
-    flex-grow: 1;
+    /* flex-grow: 1; */
     text-align: center;
+}
+
+
+@media (max-width: 50em) {
+    .headerPic {
+        background-position: bottom;
+        background-color: black;
+    }
+    .headerLeft {
+        display: none;
+    } 
 }
