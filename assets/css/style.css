@@ -9,14 +9,18 @@
     --txt-bg-style: rgb(88, 247, 125);
 }
 
-
 /* html starting size */
 html {
     font-size: 16px;
 }
 
 
+
+/* ------------------- */
+
+
 /* Basic Element Sizes */
+
 body {
     max-width: 100rem;
     margin: auto;
@@ -32,8 +36,13 @@ h3, h4, h5 {
 }
 
 
+
+/* ------------------- */
+
+
 /* Header Hero */
-.header-container {   
+
+.header-container {                 /* FLEX Container */   
     height: 75vh;
     margin: 0% 0%;
     display: flex;
@@ -44,7 +53,7 @@ h3, h4, h5 {
 .headerLeft {
     display: none;
 } 
-.headerRight {
+.headerRight {                      /* FLEX Container */
     height: 100%;
     width: min(90rem, 100%);
     background-color: var(--dark-bg);
@@ -57,7 +66,6 @@ h3, h4, h5 {
 .headerPic {
     width: 100%;
     height: 100%;
-    /* background-color: bisque; */
     background-image: url(../images/profile-pic2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -73,12 +81,10 @@ h3, h4, h5 {
     margin: 1rem;
 }
 
-
 /* Navigation */
-.nav-container {
+.nav-container {                    /* FLEX Container */
     width: 100%;
     height: 2.2rem;
-    /* background-color: blue; */
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -92,14 +98,12 @@ h3, h4, h5 {
     font-size: min(1.2rem, max(0.9rem, 4vw));
     font-weight: bold;
     padding-bottom: 2px;
-    /* flex-grow: 1; */
     text-align: center;
 }
 
 .nav-container a:hover {
     border-bottom: 2px solid var(--txt-bg-style);
 }
-
 
 /* Hero Name Box */
 .heroNameBox {
@@ -121,11 +125,13 @@ h3, h4, h5 {
 } 
 
 
+
+/* ------------------- */
+
+
 /* Sections */
+
 .page-section {
-    /* max-width: 100%;
-    max-height: 100%; */
-    min-height: 50vh;
     margin: 0 auto;
     background-color: var(--light-section-bg);
     text-align: center;
@@ -145,9 +151,13 @@ h3, h4, h5 {
 }
 .page-section p {
     text-align: center;
-    /* margin-bottom: 0.5rem; */
-    padding: 1rem 2.5rem;
+    /* margin-bottom: 4rem; */
+    padding: 4rem 2.5rem;
 }
+
+
+
+/* ------------------- */
 
 
 /* WORK */
@@ -159,32 +169,30 @@ h3, h4, h5 {
     background-repeat: repeat;
 }
 
-
 /* Work FLEX container */
 .work-container {
     padding: 4rem;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
     flex-wrap: wrap;
     /* overflow: hidden; */
-
 }
-
+.work-block-item {
+    flex: 1;
+}
 
 /* Work Blocks (all) */
 .work-block {
     margin-top: 1.5rem;
 }
 .work-block img {
-    max-width: 100%;
+    max-width: 93%;
     padding: 0.5rem;
     border-radius: 0.3rem;
     transition: 0.5sec;
     margin: auto;
-}
-.work-block img:active {
 }
 .work-block img:hover {
     cursor: pointer;
@@ -194,16 +202,17 @@ h3, h4, h5 {
     display: inline-block;
     max-width: 80%;
 }
+.work-img-label {
+    text-align: center;
+}
 
-.work-block label {
+.work-img-label label {
     display: inline-block;
     /* padding: 0% 1%; */
-    letter-spacing: 1rem;
-    font-size: 1rem;
+    letter-spacing: 0.5rem;
+    font-size: 0.8rem;
     color: var(--light-txt);
     box-shadow:5px 7px 5px rgba(0, 0, 0, 0.5);
-    /* max-width: min(40rem, max(20rem, 50vw)); */
-    /* max-width: 80%; */
     cursor: pointer;
 }
 
@@ -224,6 +233,7 @@ h3, h4, h5 {
 
 
 
+/* ------------------- */
 
 
 /* Contact */
@@ -239,13 +249,11 @@ h3, h4, h5 {
     padding: 0;
     padding-bottom: 1.5rem;
 }
-
 .contact-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
 .contact-item {
     min-width: 20rem;
     margin: 0.5rem;
@@ -265,6 +273,8 @@ h3, h4, h5 {
 }
 
 
+
+/* ------------------- */
 
 
 /* Media Queries */
@@ -291,12 +301,26 @@ h3, h4, h5 {
         min-width: 8rem;
         margin-top: 3rem;
         align-items: start;
-        /* flex-grow: 1; */
+    }
+
+    .work-container {
+        flex-wrap: nowrap;
+    }
+    .work-img-label label {
+        letter-spacing: 1rem;
+    }
+    .page-section p {
+
+        padding: 4rem 9rem;
     }
 }
+
 
 @media screen and (orientation: landscape) {
     .header-container {   
         height: 100vh;
+    }
+    .nav-container {
+        display: none;
     }
 }
