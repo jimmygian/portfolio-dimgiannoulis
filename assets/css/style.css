@@ -123,8 +123,9 @@ h3, h4, h5 {
 
 /* Sections */
 .page-section {
-    max-width: 100%;
-    max-height: 100%;
+    /* max-width: 100%;
+    max-height: 100%; */
+    min-height: 50vh;
     margin: 0 auto;
     background-color: var(--light-section-bg);
     text-align: center;
@@ -149,41 +150,76 @@ h3, h4, h5 {
 }
 
 
-/* Work */
+/* WORK */
 
+/* Work Section (BG) */
 .work-section {
-    min-height: 30rem;
     background-image: url(../images/section-bg.svg);
+    background-attachment: fixed;
+    background-repeat: repeat;
 }
-.work-section label {
+
+
+/* Work FLEX container */
+.work-container {
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    /* overflow: hidden; */
+
+}
+
+
+/* Work Blocks (all) */
+.work-block {
+    margin-top: 1.5rem;
+}
+.work-block img {
+    max-width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    transition: 0.5sec;
+    margin: auto;
+}
+.work-block img:active {
+}
+.work-block img:hover {
+    cursor: pointer;
+    filter: brightness(120%);
+}
+.work-block a {
     display: inline-block;
-    padding: 0% 2%;
+    max-width: 80%;
+}
+
+.work-block label {
+    display: inline-block;
+    /* padding: 0% 1%; */
     letter-spacing: 1rem;
     font-size: 1rem;
     color: var(--light-txt);
     box-shadow:5px 7px 5px rgba(0, 0, 0, 0.5);
-    max-width: min(40rem, max(20rem, 50vw));
-}
-.work-highlight {
-    min-height: 40vh;
-    margin: 1rem;
-    overflow: hidden;
-    /* background-color: var(--dark-bg); */
-}
-.work-highlight img {
-    max-width: min(40rem, max(20rem, 50vw));
-    /* box-shadow:5px 3px 10px var(--dark-bg); */
-    padding: 0.5rem;
-    border: 1px solid var(--txt-bg-style);
-    border-radius: 0.3rem;
-}
-.work-highlight img:active {
-    max-height: 85%;
-    max-width: 95%;
-    box-shadow: 5px 2px 10px var(--txt-bg-style);
-}
-.work-highlight img:hover {
+    /* max-width: min(40rem, max(20rem, 50vw)); */
+    /* max-width: 80%; */
     cursor: pointer;
+}
+
+
+.work-block p {
+    color: var(--light-txt);
+    /* margin: 1rem 1rem 3rem 1rem; */
+    max-width: 70%;
+    text-align: center;
+}
+
+/* Work Highlight */
+.work-highlight img {
+    /* max-width: min(40rem, max(20rem, 50vw)); */
+    /* max-width: 80%; */
+    border: 1px solid var(--txt-bg-style);
 }
 
 
