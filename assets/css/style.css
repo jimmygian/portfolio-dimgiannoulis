@@ -212,7 +212,7 @@ h3, h4, h5 {
 .page-section p {
     text-align: center;
     /* margin-bottom: 4rem; */
-    padding: 4rem 2.5rem;
+    padding: 1rem 3rem;
 }
 
 
@@ -364,8 +364,7 @@ h3, h4, h5 {
 
     /* Sections */
     .page-section p {
-
-        padding: 4rem 9rem;
+        padding: 1rem 7rem;
     }
 
     /* Contact */
