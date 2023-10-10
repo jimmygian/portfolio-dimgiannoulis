@@ -72,9 +72,9 @@ h3, h4, h5 {
 /* ------------------- */
 
 
-/* Header Hero */
+/* Hero */
 
-.header-container {                 /* FLEX Container */   
+.hero-container {                 /* FLEX Container */   
     height: 75vh;
     margin: 0% 0%;
     display: flex;
@@ -82,10 +82,10 @@ h3, h4, h5 {
     justify-content: center;
     align-items: flex-start;
 }
-.headerLeft {
+.hero-side {
     display: none;
 } 
-.headerRight {                      /* FLEX Container */
+.hero-main {                      /* FLEX Container */
     height: 100%;
     width: min(90rem, 100%);
     background-color: var(--dark-bg);
@@ -95,7 +95,7 @@ h3, h4, h5 {
     align-items: center;
 }
 
-.headerPic {
+.hero-pic {
     width: 100%;
     height: 100%;
     background-image: url(../images/profile-pic2.jpg);
@@ -104,28 +104,28 @@ h3, h4, h5 {
     background-position: center;
 }
 
-.headerLeft h1 {
+.hero-side h1 {
     color: var(--light-txt);
     text-align: center;
     margin: 1rem;
 }
-.headerRight nav {
+.hero-main nav {
     margin: 1rem;
 }
 
 /* Hero Name Box */
-.heroNameBox {
+.hero-name-box {
     max-width: fit-content;
     position: relative;
     top: 70%;
     left: 10%;
     color: var(--light-txt);
 }
-.heroNameBox h2 {
+.hero-name-box h2 {
     font-size: min(3rem, max(2rem, 4vw));
     font-weight: bold;
 } 
-.heroNameBox h3 {
+.hero-name-box h3 {
     font-size: min(3rem, max(2rem, 4vw));
     font-weight: bold;
     color: var(--dark-txt);
@@ -139,7 +139,7 @@ h3, h4, h5 {
 
 
 /* Navigation2 FLEX */
-.nav-cont-cl {                    /* FLEX Container2 */
+.hero-nav-container {                    /* FLEX Container2 */
     width: 100%;
     height: 2.2rem;
     display: flex;
@@ -150,7 +150,7 @@ h3, h4, h5 {
     padding-bottom: 3rem;
     /* flex-wrap: wrap; */
 }
-.nav-cont-cl a {
+.hero-nav-container a {
     color: var(--light-txt);
     text-decoration: none;
     box-shadow: 2px;
@@ -160,23 +160,23 @@ h3, h4, h5 {
     text-align: center;
 }
 
-.nav-cont-cl a:hover {
+.hero-nav-container a:hover {
     border-bottom: 2px solid var(--txt-bg-style);
 }
 
 /* Hero Name Box */
-.heroNameBox2 {
+.hero-name-box2 {
     max-width: fit-content;
     position: relative;
     top: 70%;
     left: 10%;
     color: var(--light-txt);
 }
-.heroNameBox2 h2 {
+.hero-name-box2 h2 {
     font-size: min(3rem, max(2rem, 4vw));
     font-weight: bold;
 } 
-.heroNameBox2 h3 {
+.hero-name-box2 h3 {
     font-size: min(3rem, max(2rem, 4vw));
     font-weight: bold;
     color: var(--dark-txt);
@@ -244,21 +244,21 @@ h3, h4, h5 {
 }
 
 /* Work Blocks (all) */
-.work-block {
+.work-block-style {
     margin-top: 1.5rem;
 }
-.work-block img {
+.work-block-style img {
     max-width: 93%;
     padding: 0.5rem;
     border-radius: 0.3rem;
     transition: 0.5sec;
     margin: auto;
 }
-.work-block img:hover {
+.work-block-style img:hover {
     cursor: pointer;
     filter: brightness(120%);
 }
-.work-block a {
+.work-block-style a {
     display: inline-block;
     max-width: 80%;
 }
@@ -277,7 +277,7 @@ h3, h4, h5 {
 }
 
 
-.work-block p {
+.work-block-style p {
     color: var(--light-txt);
     /* margin: 1rem 1rem 3rem 1rem; */
     max-width: 70%;
@@ -347,7 +347,7 @@ h3, h4, h5 {
     }
 
     /* Header */
-    .headerLeft {
+    .hero-side {
         display: flex;
         /* New */
         flex-direction: column;
@@ -358,7 +358,7 @@ h3, h4, h5 {
         width: min(300px, 50%);
         background-color: var(--dark-bg);
     }
-    .headerRight {
+    .hero-main {
         background-color: var(--header-color);
     }
 
@@ -391,7 +391,7 @@ h3, h4, h5 {
 
 
 @media screen and (orientation: landscape) {
-    .header-container {   
+    .hero-container {   
         height: 100vh;
     }
     .nav-container {
